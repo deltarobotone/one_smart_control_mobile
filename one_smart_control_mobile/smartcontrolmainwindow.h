@@ -84,6 +84,7 @@ private:
     QPushButton *rightButton;
 
     QLabel *infoLabel;
+    QLabel *githubLabel;
 
     uint page = Page::start;
 

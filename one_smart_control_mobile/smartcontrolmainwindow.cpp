@@ -66,6 +66,7 @@ SmartControlMainWindow::SmartControlMainWindow(QWidget *parent) :
     infoLabel = new QLabel;
 
     versionLabel = new QLabel;
+    githubLabel = new QLabel;
 
     createLayout();
 }
@@ -191,9 +192,11 @@ void SmartControlMainWindow::createLayout()
 
     rightButton->setIcon(QIcon(":/images/icons/rightside.png"));
     rightButton->setMinimumSize(size*8,3*size);
+    rightButton->setIconSize(QSize(size, size));
 
     leftButton->setIcon(QIcon(":/images/icons/leftside.png"));
     leftButton->setMinimumSize(size*8,3*size);
+    leftButton->setIconSize(QSize(size, size));
 
     buttonWidget->setLayout(buttonLayout);
     buttonLayout->addWidget(leftButton);
@@ -204,6 +207,10 @@ void SmartControlMainWindow::createLayout()
     versionLabel->setText("V " + OneSmartControl::version.toString());
     versionLabel->setAlignment(Qt::AlignHCenter);
     versionLabel->setFont(font);
+
+    githubLabel->setText("github.com/deltarobotone");
+    githubLabel->setAlignment(Qt::AlignHCenter);
+    githubLabel->setFont(font);
 
     infoLabel->setFont(font);
     infoLabel->setText("");
@@ -230,17 +237,21 @@ void SmartControlMainWindow::changeLayout(uint page)
         basicLayout->addStretch(5);
         basicLayout->addWidget(logoWidget,Qt::AlignCenter);
         basicLayout->addWidget(versionLabel,Qt::AlignHCenter);
-        basicLayout->addStretch(5);
+        basicLayout->addStretch(3);
+        basicLayout->addWidget(githubLabel,Qt::AlignHCenter);
+        basicLayout->addStretch(3);
         basicLayout->addWidget(buttonWidget,0,Qt::AlignBottom);
         leftButton->setEnabled(false);
         logoWidget->show();
         versionLabel->show();
+        githubLabel->show();
         break;
 
     case Page::prepare:
         logoWidget->hide();
         connectGroupbox->hide();
         versionLabel->hide();
+        githubLabel->hide();
         basicLayout->addStretch(1);
         basicLayout->addWidget(prepareWidget,Qt::AlignCenter);
         basicLayout->addStretch(1);
@@ -253,6 +264,7 @@ void SmartControlMainWindow::changeLayout(uint page)
     case Page::connect:
         prepareWidget->hide();
         sliderGroupbox->hide();
+        basicLayout->addStretch(1);
         infoLabel->hide();
         basicLayout->addStretch(1);
         basicLayout->addWidget(connectGroupbox);
@@ -268,7 +280,9 @@ void SmartControlMainWindow::changeLayout(uint page)
         connectGroupbox->hide();
         lightGroupbox->hide();
         timeGroupbox->hide();
+        basicLayout->addStretch(1);
         basicLayout->addWidget(infoLabel);
+        basicLayout->addStretch(1);
         basicLayout->addWidget(sliderGroupbox);
         basicLayout->addStretch(10);
         basicLayout->addWidget(buttonWidget,0,Qt::AlignBottom);
@@ -281,14 +295,15 @@ void SmartControlMainWindow::changeLayout(uint page)
     case Page::functions:
         sliderGroupbox->hide();
         flowChartGroupbox->hide();
+        basicLayout->addStretch(1);
         basicLayout->addWidget(infoLabel);
         basicLayout->addStretch(1);
         basicLayout->addWidget(lightGroupbox);
-        basicLayout->addStretch(5);
+        basicLayout->addStretch(2);
         basicLayout->addWidget(timeGroupbox);
-        basicLayout->addStretch(5);
+        basicLayout->addStretch(2);
         basicLayout->addWidget(gripperGroupbox);
-        basicLayout->addStretch(5);
+        basicLayout->addStretch(2);
         basicLayout->addWidget(buttonWidget,0,Qt::AlignBottom);
         leftButton->setEnabled(true);
         rightButton->setEnabled(true);

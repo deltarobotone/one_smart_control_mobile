@@ -84,13 +84,12 @@ void OneSmartControl::GripperWidget::createLayout()
         basicLayout->setSpacing(25);
     }
 
-
     openButton->setFont(font);
-    openButton->setMinimumSize(size*4,size);
+    openButton->setMinimumSize(int(size*3.5),size);
     openButton->setMaximumHeight(size);
 
     closeButton->setFont(font);
-    closeButton->setMinimumSize(size*4,size);
+    closeButton->setMinimumSize(int(size*3.5),size);
     closeButton->setMaximumHeight(size);
 
     toChartButton->setIcon(QIcon(":/images/icons/next.png"));

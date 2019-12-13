@@ -33,7 +33,7 @@ void OneSmartControl::FlowChartWidget::createLayout()
 
     if (screenSize == Screensize::XS)
     {
-        font = QFont("Arial Rounded MT Bold", 12);
+        font = QFont("Arial Rounded MT Bold", 13);
 
         controlChartView->setFont(font);
         controlChartView->setStyleSheet("QListView {background-color: rgb(255, 255, 255); border-radius: 15px; border: 4px solid rgb(200, 200, 200); padding: 10px 10px;}"
