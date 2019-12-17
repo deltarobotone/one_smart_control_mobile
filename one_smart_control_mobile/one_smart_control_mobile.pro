@@ -90,8 +90,8 @@ contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
 }
 
 contains(ANDROID_TARGET_ARCH,arm64-v8a) {
-    ANDROID_PACKAGE_SOURCE_DIR = \
-        $$PWD/android
+   ANDROID_PACKAGE_SOURCE_DIR = \
+       $$PWD/android
 }
 
 contains(ANDROID_TARGET_ARCH,x86) {

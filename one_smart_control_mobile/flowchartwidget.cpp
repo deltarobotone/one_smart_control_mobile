@@ -318,12 +318,15 @@ void OneSmartControl::FlowChartWidget::loadButtonHandle()
         const QString READ_EXTERNAL_STORAGE("android.permission.READ_EXTERNAL_STORAGE");
         QtAndroid::requestPermissionsSync(QStringList() << READ_EXTERNAL_STORAGE);
     }
+
+    //QString fileName = QFileDialog::getOpenFileName(this,tr("Open Flowchart"), QStandardPaths::displayName(QStandardPaths::DownloadLocation), tr("Flowchart (*.fc)"));
+    //qDebug() << fileName;
     QStringList fileNames;
     fileDialog->setNameFilter(tr("Flowchart (*.fc)"));
     fileDialog->setFileMode(QFileDialog::AnyFile);
     fileDialog->setViewMode(QFileDialog::Detail);
     if (fileDialog->exec())fileNames = fileDialog->selectedFiles();
-    qDebug() << fileNames;
+    //qDebug() << fileNames;
 }
 
 void OneSmartControl::FlowChartWidget::fileSelected(const QString &filename)
