@@ -27,7 +27,7 @@ The first page to control the robot is full of sliders for X-,Y-,Z-Axis movement
 
 ### Control widget for light, time and gripper
 
-the second robot control page provides widgets to use the light of the robot, add some waiting time to the flowchart and open/close the robot gripper.
+The second robot control page provides widgets to use the light of the robot, add some waiting time to the flowchart and open/close the robot gripper.
 
 [<img src="https://github.com/deltarobotone/image_database/blob/master/smart_control_mobile_screenshots/smart_control_mobile_screenshots%20(12).png" width="200">](https://raw.githubusercontent.com/deltarobotone/image_database/master/smart_control_mobile_screenshots/smart_control_mobile_screenshots%20(12).png)
 [<img src="https://github.com/deltarobotone/image_database/blob/master/smart_control_mobile_screenshots/smart_control_mobile_screenshots%20(13).png" width="200">](https://raw.githubusercontent.com/deltarobotone/image_database/master/smart_control_mobile_screenshots/smart_control_mobile_screenshots%20(13).png)
