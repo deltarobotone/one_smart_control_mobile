@@ -1,7 +1,7 @@
 <Img src="https://github.com/deltarobotone/image_database/blob/master/logos/logos%20(8).PNG" width=350>
 
 # [**>>>Google Play Store<<<**](https://play.google.com/store/apps/details?id=one.smart.control.mobile&gl=DE)
-# One Smart Control Desktop Software  
+# One Smart Control Mobile Software  
 
 The One Smart Control Application is written in C++ using the Qt-Creator IDE and Qt-Framework. Check out the development master branch of this repository and have a look at the sourcecode.
 
